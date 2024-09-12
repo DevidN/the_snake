@@ -1,8 +1,8 @@
-import pygame as pg
-
 from random import choice, randint
 
 import sys
+
+import pygame as pg
 
 
 # Константы для размеров поля и сетки:
@@ -74,7 +74,7 @@ class Apple(GameObject):
     """Класс яблоко."""
 
     def __init__(self,
-                 positions=[],
+                 positions=None,
                  color=APPLE_COLOR):
         """Присваиваем значения для объекта яблоко."""
         super().__init__(None, color)
@@ -165,7 +165,7 @@ def main():
     pg.init()
     # Тут нужно создать экземпляры классов.
     snake = Snake()
-    apple = Apple(positions=snake.get_head_position())
+    apple = Apple(positions=snake.positions)
 
     while True:
         clock.tick(SPEED)
