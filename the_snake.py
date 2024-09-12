@@ -78,6 +78,8 @@ class Apple(GameObject):
                  color=APPLE_COLOR):
         """Присваиваем значения для объекта яблоко."""
         super().__init__(None, color)
+        if positions is None:
+            positions = []
         self.randomize_position(positions)
 
     def draw(self):
