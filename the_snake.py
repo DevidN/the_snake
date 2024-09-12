@@ -74,7 +74,7 @@ class Apple(GameObject):
     """Класс яблоко."""
 
     def __init__(self,
-                 positions,
+                 positions=[],
                  color=APPLE_COLOR):
         """Присваиваем значения для объекта яблоко."""
         super().__init__(None, color)
